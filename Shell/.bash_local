@@ -1,0 +1,9 @@
+# Local settings. -*- mode: sh; -*-
+#
+
+HOST=`hostname`
+
+if [ "$HOST" == "flippy-lappy" ]; then
+    alias mkey='sh /media/OPENER/Scripts/Shell/mount_keyring.sh';
+    alias umkey='sh /media/OPENER/Scripts/Shell/umount_keyring.sh && sudo umount /media/OPENER';
+fi

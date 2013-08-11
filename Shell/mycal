@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+START=`date +"%Y-%m-%d"`
+END=`date +"%Y-%m-%d" --date="next week"`
+
+cal -3
+google calendar list --date=$START,$END --fields when,title
+google calendar list --date=$START,$END --fields when,title --cal="Pittsburgh Events"
+
+#Shared calendars don't seem to work right.
+#google calendar list --date=$START,$END --cal="William Beegle"
